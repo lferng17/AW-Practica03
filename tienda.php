@@ -27,13 +27,14 @@
 </head>
 
 <body>
-    <div id="navegador">
+<div id="navegador">
         <ul>
-            <li><a href="crearColeccion.php">Crear Coleccion</a></li>
-            <li><a href="crearCromo.php">Crear Cromo</a></li>
-            <li><a href="cerrar_sesion.php">Cerrar Sesion</a></li>
-            <li><a href="tienda.php">Tienda</a></li>
-            <li>Hola <?php echo $nombre_usuario?>, su saldo es: <?php echo $saldo_usuario?>
+            <li><a href="crearColeccion.php">CREAR COLECCIÓN</a></li>
+            <li><a href="crearCromo.php">CREAR CROMO</a></li>
+            <li><a href="cerrar_sesion.php">CERRAR SESION</a></li>
+            <li><a href="tienda.php">TIENDA</a></li>
+            <li><a href="tienda.php">VER LA COLECCIÓN</a></li>
+            <li>Hola <?php echo $nombre_usuario ?>, su saldo es: <?php echo $saldo_usuario ?>
         </ul>
     </div>
     <table>
@@ -54,7 +55,7 @@
         <td><?php echo $coleccion->precio?></td>
         <td><?php echo $coleccion->caratula?></td>
         <td><a href="comprarColeccion.php?id=<?php echo $coleccion->id?>&precio=<?php echo$coleccion->precio?>"><input type="button" name="comprarCol" value="Comprar Colección"></a></td>
-        <td><input type="button" name="comprarCrom" value="Comprar Cromos"></td>
+        <td><a href="comprarCromo.php?id_coleccion=<?php echo $coleccion->id?>"><input type="button" name="comprarCrom" value="Comprar Cromos"></a></td>
         </tr>
 
         <?php endforeach; ?>

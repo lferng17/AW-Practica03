@@ -1,10 +1,10 @@
 <?php
 
-    $nombre=$_GET["nombre"];
-    $precio=$_GET["precio"];
-    $album=$_GET["album"];
-    $caratula=$_GET["caratula"];
-    $unidades=$_GET["unidades"];
+    $nombre=$_POST["nombre"];
+    $precio=$_POST["precio"];
+    $album=$_POST["album"];
+    $caratula=$_POST["caratula"];
+    $unidades=$_POST["unidades"];
 
     require("conexion_BBDD.php");
     if (mysqli_connect_errno()){

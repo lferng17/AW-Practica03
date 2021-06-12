@@ -15,12 +15,13 @@
 </head>
 
 <body>
-    <div id="navegador">
+<div id="navegador">
         <ul>
-            <li><a href="crearColeccion.php">Crear Coleccion</a></li>
-            <li><a href="crearCromo.php">Crear Cromo</a></li>
-            <li><a href="cerrar_sesion.php">Cerrar Sesion</a></li>
-            <li><a href="tienda.php">Tienda</a></li>
+            <li><a href="crearColeccion.php">CREAR COLECCIÓN</a></li>
+            <li><a href="crearCromo.php">CREAR CROMO</a></li>
+            <li><a href="cerrar_sesion.php">CERRAR SESION</a></li>
+            <li><a href="tienda.php">TIENDA</a></li>
+            <li><a href="tienda.php">VER LA COLECCIÓN</a></li>
         </ul>
     </div>
     <form action="insertarColeccion.php" method="get" name="formColeccion">

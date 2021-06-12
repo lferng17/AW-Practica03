@@ -16,15 +16,16 @@
 </head>
 
 <body>
-    <div id="navegador">
+<div id="navegador">
         <ul>
-            <li><a href="crearColeccion.php">Crear Coleccion</a></li>
-            <li><a href="crearCromo.php">Crear Cromo</a></li>
-            <li><a href="cerrar_sesion.php">Cerrar Sesion</a></li>
-            <li><a href="tienda.php">Tienda</a></li>
+            <li><a href="crearColeccion.php">CREAR COLECCIÓN</a></li>
+            <li><a href="crearCromo.php">CREAR CROMO</a></li>
+            <li><a href="cerrar_sesion.php">CERRAR SESION</a></li>
+            <li><a href="tienda.php">TIENDA</a></li>
+            <li><a href="tienda.php">VER LA COLECCIÓN</a></li>
         </ul>
     </div>
-    <form action="insertarCromo.php" method="get" name="formCromo">
+    <form action="insertarCromo.php" method="post" name="formCromo">
         <div>
             Nombre: <br>
             <input type="text" name="nombre" id="nombre"> <br>

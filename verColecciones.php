@@ -3,7 +3,6 @@ session_start();
 if (!isset($_SESSION["usuario"])) {
     header("Location:login.php");
 }
-$id_coleccion = $_GET["id_coleccion"];
 include("conexion_BBDD_PDO.php");
 $usuario = $base->query("SELECT * FROM usuarios WHERE usuario='" . $_SESSION["usuario"] . "'")->fetchAll(PDO::FETCH_OBJ);
 foreach ($usuario as $user) {
@@ -11,20 +10,18 @@ foreach ($usuario as $user) {
     $saldo_usuario = $user->saldo;
     $nombre_usuario = $user->usuario;
 }
-$registros = $base->query("SELECT * FROM cromos WHERE id_coleccion = $id_coleccion")->fetchAll(PDO::FETCH_OBJ);
-
+$registros = $base->query("SELECT * FROM colecciones INNER JOIN usuarios_colecciones ON colecciones.id = usuarios_colecciones.id_coleccion WHERE usuarios_colecciones.id_usuario=$id_usuario")->fetchAll(PDO::FETCH_OBJ);
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
-    <title>Comprar Cromos</title>
+    <title>Crear Coleccion</title>
 </head>
 
 <body>
-
-<div id="navegador">
+    <div id="navegador">
         <ul>
             <li><a href="crearColeccion.php">CREAR COLECCIÓN</a></li>
             <li><a href="crearCromo.php">CREAR CROMO</a></li>
@@ -38,23 +35,20 @@ $registros = $base->query("SELECT * FROM cromos WHERE id_coleccion = $id_colecci
         <tr>
             <td>ID</td>
             <td>Nombre</td>
-            <td>Precio</td>
             <td>Carátula</td>
-            <td>Unidades</td>
-            <td>Comprar</td>
+            <td>Ver Cromos</td>
         </tr>
 
         <?php
-        foreach ($registros as $cromo) : ?>
-            <tr>
-                <td><?php echo $cromo->id ?></td>
-                <td><?php echo $cromo->nombre ?></td>
-                <td><?php echo $cromo->precio ?></td>
-                <td><?php echo $cromo->caratula ?></td>
-                <td><?php echo $cromo->unidades ?></td>
-                <td><a href="comprarCromoImpl.php?id=<?php echo $cromo->id ?>&precio=<?php echo $cromo->precio ?>&unidades=<?php echo $cromo->unidades ?>"><input type="button" name="comprarCol" value="Comprar"></a></td>
-            </tr>
+        foreach ($registros as $coleccion) : ?>
+        <tr>
+            <td><?php echo $coleccion->id ?></td>
+            <td><?php echo $coleccion->nombre ?></td>
+            <td><?php echo $coleccion->caratula ?></td>
+            <td><a href="verCromos.php?id_coleccion=<?php echo $coleccion->id?>"><input type="button" value="Ver Cromos"></a></td>
+        </tr>
         <?php endforeach; ?>
+
     </table>
 </body>
 
