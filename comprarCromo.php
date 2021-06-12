@@ -9,10 +9,10 @@
 <body>
 <?php
     session_start();
-
-    if (!isset($_SESSION["admin"])) {
+    if (!isset($_SESSION["usuario"])) {
         header("Location:login.php");
     }
+    $id_coleccion = $_GET["id_coleccion"];
 ?>
 </body>
 
