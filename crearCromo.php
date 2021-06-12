@@ -1,3 +1,12 @@
+<?php
+    session_start();
+
+    if (!isset($_SESSION["admin"])) {
+        header("Location:login.php");
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -7,13 +16,6 @@
 </head>
 
 <body>
-    <?php
-    session_start();
-    if (!isset($_SESSION["admin"])) {
-        header("Location:login.php");
-    }
-
-    ?>
     <div id="navegador">
         <ul>
             <li><a href="crearColeccion.php">Crear Coleccion</a></li>

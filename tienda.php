@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Tienda</title>
-</head>
-
-<body>
 <?php
     session_start();
 
@@ -14,8 +5,8 @@
         header("Location:login.php");
     }
 
-    ?>
-    <?php
+?>
+<?php
     include("conexion_BBDD_PDO.php");
     $usuario=$base->query("SELECT * FROM usuarios WHERE usuario='".$_SESSION["usuario"]."'")->fetchAll(PDO::FETCH_OBJ);
     foreach($usuario as $user){
@@ -25,7 +16,17 @@
     }
     $registros=$base->query("SELECT * FROM colecciones")->fetchAll(PDO::FETCH_OBJ);
 
-    ?>
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tienda</title>
+</head>
+
+<body>
     <div id="navegador">
         <ul>
             <li><a href="crearColeccion.php">Crear Coleccion</a></li>
