@@ -10,11 +10,20 @@
     <?php
     session_start();
 
-    if (!isset($_SESSION["usuario"])) {
+    if (!isset($_SESSION["admin"])) {
         header("Location:login.php");
     }
 
     ?>
+    <div id="navegador">
+        <ul>
+            <li><a href="crearColeccion.php">Crear Coleccion</a></li>
+            <li><a href="crearCromo.php">Crear Cromo</a></li>
+            <li><a href="cerrar_sesion.php">Cerrar Sesion</a></li>
+            <li><a href="tienda.php">Tienda</a></li>
+            <li>Hola <?php echo $nombre_usuario?>, su saldo es: <?php echo $saldo_usuario?>
+        </ul>
+    </div>
     <form action="insertarCromo.php" method="get" name="formCromo">
         <div>
             Nombre: <br>

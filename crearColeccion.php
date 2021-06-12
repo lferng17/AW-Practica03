@@ -10,11 +10,18 @@
     <?php
     session_start();
 
-    if (!isset($_SESSION["usuario"])) {
+    if (!isset($_SESSION["admin"])) {
         header("Location:login.php");
     }
-
     ?>
+    <div id="navegador">
+        <ul>
+            <li><a href="crearColeccion.php">Crear Coleccion</a></li>
+            <li><a href="crearCromo.php">Crear Cromo</a></li>
+            <li><a href="cerrar_sesion.php">Cerrar Sesion</a></li>
+            <li><a href="tienda.php">Tienda</a></li>
+        </ul>
+    </div>
     <form action="insertarColeccion.php" method="get" name="formColeccion">
         Nombre: <br>
         <input type="text" name="nombre"> <br>

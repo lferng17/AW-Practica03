@@ -20,14 +20,19 @@ try {
 
         session_start();
 
+        $admin = $resultado->fetchColumn(3);
 
+        if ($admin==1){
+            $_SESSION["admin"] = 1;
+        }
 
         $_SESSION["usuario"] = $_POST["usuario"];
 
-        header("Location:crearColeccion.php");
+        header("Location: tienda.php");
+
     } else {
 
-        header("Location: login.php");
+        echo 'El email o password es incorrecto, <a href="login.php">vuelva a intenarlo</a>.<br/>';
     }
 } catch (Exception $e) {
     die("Error: " . $e->getMessage());
