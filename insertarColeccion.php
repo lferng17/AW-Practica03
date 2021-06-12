@@ -1,5 +1,4 @@
 <?php
-
 $nombre = $_GET["nombre"];
 $precio = $_GET["precio"];
 $caratula = $_GET["caratula"];

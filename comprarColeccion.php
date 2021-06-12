@@ -10,12 +10,18 @@ $precio = $_GET["precio"];
 foreach ($usuario as $user) {
     $id_usuario = $user->id_user;
     $saldo_usuario = $user->saldo;
-    if ($precio < $saldo_usuario) {
-        $base->query("INSERT INTO usuarios_colecciones VALUES ($id_usuario, $id_coleccion)");
-        $saldo_usuario=$saldo_usuario-$precio;
-        $base->query("UPDATE usuarios SET saldo=$saldo_usuario WHERE id_user=$id_usuario");
-        header("Location: tienda.php");
+    $replicado = $base->query("SELECT * FROM usuarios_colecciones WHERE id_usuario=$id_usuario AND id_coleccion=$id_coleccion");
+    $numero_registro = $replicado->rowCount();
+    if($numero_registro==0){
+        if ($precio < $saldo_usuario) {
+            $base->query("INSERT INTO usuarios_colecciones VALUES ($id_usuario, $id_coleccion)");
+            $saldo_usuario=$saldo_usuario-$precio;
+            $base->query("UPDATE usuarios SET saldo=$saldo_usuario WHERE id_user=$id_usuario");
+            header("Location: tienda.php");
+        } else {
+            echo "NO TIENES SUFICIENTE SALDO PARA COMPRAR ESTA COLECCION. <a href='tienda.php'>VOLVER A LA TIENDA</a>";
+        }
     } else {
-        echo "NO TIENES SUFICIENTE SALDO PARA COMPRAR ESTA COLECCION. <a href='tienda.php'>VOLVER A LA TIENDA</a>";
+        echo "YA TIENES ESTA COLECCION COMPRADA. <a href='tienda.php'>VOLVER A LA TIENDA</a><br>";
     }
 }

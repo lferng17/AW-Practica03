@@ -22,10 +22,10 @@
             <li><a href="crearCromo.php">CREAR CROMO</a></li>
             <li><a href="cerrar_sesion.php">CERRAR SESION</a></li>
             <li><a href="tienda.php">TIENDA</a></li>
-            <li><a href="tienda.php">VER LA COLECCIÓN</a></li>
+            <li><a href="verColecciones.php">VER LA COLECCIÓN</a></li>
         </ul>
     </div>
-    <form action="insertarCromo.php" method="post" name="formCromo">
+    <form action="insertarCromo.php" method="post" name="formCromo" enctype="multipart/form-data">
         <div>
             Nombre: <br>
             <input type="text" name="nombre" id="nombre"> <br>
