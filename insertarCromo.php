@@ -8,10 +8,23 @@
 
     $nombre_imagen = $_FILES['caratula']['name']; //Primer corchete referencia al name del input type de crearCromo
     $tamanio_imagen = $_FILES['caratula']['size'];
-    $carpeta_imagen = $_SERVER['DOCUMENT_ROOT'].'/Kiosko/ImagenesServidor/'; //Ruta de la carpeta destino en servidor
-    move_uploaded_file($_FILES['caratula']['tmp_name'], $carpeta_imagen.$nombre_imagen);    //Movemos la imagen del dir.temporal al escogido
-
+    $tipo_imagen = $_FILES['caratula']['type'];
     
+    if($tamanio_imagen <= 1000000){ //Menor a un mega
+
+        if ($tipo_imagen == "image/jpeg" || $tipo_imagen == "image/jpg" || $tipo_imagen == "image/png") {
+
+            $carpeta_imagen = $_SERVER['DOCUMENT_ROOT'].'/AW-Practica03-main/ImagenesServidor/'; //Ruta de la carpeta destino en servidor
+            move_uploaded_file($_FILES['caratula']['tmp_name'], $carpeta_imagen.$nombre_imagen);    //Movemos la imagen del dir.temporal al escogido
+            
+        } else {
+            echo "Solo se pueden subir .jpeg, .jpg o .png";
+        }
+        
+    } else {
+        echo "El tamaño de la imagen es muy grande";
+    }
+
 
     require("conexion_BBDD.php");
     if (mysqli_connect_errno()){
@@ -28,7 +41,6 @@
         echo "Error en la consulta";
     } else {
         echo "Registro guardado";
-        echo $carpeta_imagen; 
     }
 
     mysqli_close($conexion);
