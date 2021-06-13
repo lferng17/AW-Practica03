@@ -30,15 +30,15 @@
     <form action="insertarCromo.php" method="post" name="formCromo" enctype="multipart/form-data">
         <div>
             Nombre: <br>
-            <input type="text" name="nombre" id="nombre"> <br>
+            <input type="text" name="nombre" id="nombre" required> <br>
             Precio: <br>
-            <input type="text" name="precio" id="precio"> <br>
+            <input type="text" name="precio" id="precio" required> <br>
             Álbum:<br>
-            <input type="text" name="album" id="album"><br>
+            <input type="text" name="album" id="album" required><br>
             Carátula: <br>
-            <input type="file" name="caratula" id="caratula"><br>
+            <input type="file" name="caratula" id="caratula" required><br>
             Unidades: <br>
-            <input type="text" name="unidades" id="unidades"><br>
+            <input type="text" name="unidades" id="unidades" required><br><br>
 
             <input type="submit" value="Enviar">
         </div>
