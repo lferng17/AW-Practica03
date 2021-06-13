@@ -24,6 +24,7 @@
 <head>
     <meta charset="utf-8">
     <title>Tienda</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
@@ -31,10 +32,10 @@
         <ul>
             <li><a href="crearColeccion.php">CREAR COLECCIÓN</a></li>
             <li><a href="crearCromo.php">CREAR CROMO</a></li>
-            <li><a href="cerrar_sesion.php">CERRAR SESION</a></li>
-            <li><a href="tienda.php">TIENDA</a></li>
+            <li style="float:right"><a href="cerrar_sesion.php">CERRAR SESION</a></li>
+            <li><a class="active" href="tienda.php">TIENDA</a></li>
             <li><a href="verColecciones.php">VER LA COLECCIÓN</a></li>
-            <li>Hola <?php echo $nombre_usuario ?>, su saldo es: <?php echo $saldo_usuario ?>
+            <li style="float:right"><a>Hola <?php echo $nombre_usuario ?>, su saldo es: <?php echo $saldo_usuario ?></a></li>
         </ul>
     </div>
     <table>
