@@ -23,17 +23,8 @@ $registros = $base->query("SELECT * FROM cromos INNER JOIN usuarios_cromos ON cr
 </head>
 
 <body>
-    <div id="navegador">
-        <ul>
-            <li><a href="crearColeccion.php">CREAR COLECCIÓN</a></li>
-            <li><a href="crearCromo.php">CREAR CROMO</a></li>
-            <li style="float:right"><a href="cerrar_sesion.php">CERRAR SESION</a></li>
-            <li><a href="tienda.php">TIENDA</a></li>
-            <li><a class="active" href="verColecciones.php">VER LA COLECCIÓN</a></li>
-            <li><a href="cuestionarioEuro.php">GANAR PUNTOS</a></li>
-            <li style="float:right"><a>Hola <?php echo $nombre_usuario ?>, su saldo es: <?php echo $saldo_usuario ?></a></li>
-        </ul>
-    </div>
+    
+<?php include("navbar.php");?>
     <table>
         <tr>
             <td>ID</td>

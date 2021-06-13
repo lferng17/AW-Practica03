@@ -22,17 +22,8 @@ foreach ($usuario as $user) {
 </head>
 
 <body>
-    <div id="navegador">
-        <ul>
-            <li><a href="crearColeccion.php">CREAR COLECCIÓN</a></li>
-            <li><a href="crearCromo.php">CREAR CROMO</a></li>
-            <li style="float:right"><a href="cerrar_sesion.php">CERRAR SESION</a></li>
-            <li><a href="tienda.php">TIENDA</a></li>
-            <li><a href="verColecciones.php">VER LA COLECCIÓN</a></li>
-            <li><a class="active" href="cuestionarioEuro.php">GANAR PUNTOS</a></li>
-            <li style="float:right"><a>Hola <?php echo $nombre_usuario ?>, su saldo es: <?php echo $saldo_usuario ?></a></li>
-        </ul>
-    </div>
+    <?php include("navbar.php");?>
+    
     <div class="form">
         <form action="compruebaCuest.php" method="get">
             <table>
@@ -47,7 +38,7 @@ foreach ($usuario as $user) {
                 <tr>
                     <td>3. ¿Cuál de estas selecciones NO tiene 3 Eurocopas?</td>
                     <td>
-                        <input type="radio" id="spa" name="treseuros" value="spa">
+                        <input type="radio" id="spa" name="treseuros" value="spa" checked>
                         <label for="spa">España</label><br>
                         <input type="radio" id="ger" name="treseuros" value="ger">
                         <label for="ger">Alemania</label><br>
