@@ -19,11 +19,12 @@ if (!isset($_SESSION["admin"])) {
     <?php include("navbar.php");?>
     <form action="insertarColeccion.php" method="post" name="formColeccion" enctype="multipart/form-data">
         Nombre: <br>
-        <input type="text" name="nombre"> <br>
+        <input type="text" name="nombre" required> <br>
         Precio: <br>
-        <input type="text" name="precio"> <br>
+        <input type="text" name="precio" required> <br>
         Carátula: <br>
-        <input type="file" name="caratula"> <br>
+        <input type="file" name="caratula" required> <br><br>
+
         <input type="submit" name="subir" value="Enviar">
     </form>
 </body>
