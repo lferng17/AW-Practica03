@@ -24,6 +24,7 @@
             <li style="float:right"><a href="cerrar_sesion.php">CERRAR SESION</a></li>
             <li><a href="tienda.php">TIENDA</a></li>
             <li><a href="verColecciones.php">VER LA COLECCIÓN</a></li>
+            <li><a href="cuestionarioEuro.php">GANAR PUNTOS</a></li>
         </ul>
     </div>
     <form action="insertarCromo.php" method="post" name="formCromo" enctype="multipart/form-data">

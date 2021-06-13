@@ -29,6 +29,7 @@ $registros = $base->query("SELECT * FROM colecciones INNER JOIN usuarios_colecci
             <li style="float:right"><a href="cerrar_sesion.php">CERRAR SESION</a></li>
             <li><a href="tienda.php">TIENDA</a></li>
             <li><a class="active" href="verColecciones.php">VER LA COLECCIÓN</a></li>
+            <li><a href="cuestionarioEuro.php">GANAR PUNTOS</a></li>
             <li style="float:right"><a>Hola <?php echo $nombre_usuario ?>, su saldo es: <?php echo $saldo_usuario ?></a></li>
         </ul>
     </div>
