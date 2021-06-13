@@ -45,7 +45,7 @@ $registros = $base->query("SELECT * FROM cromos INNER JOIN usuarios_cromos ON cr
         <tr>
             <td><?php echo $coleccion->id ?></td>
             <td><?php echo $coleccion->nombre ?></td>
-            <td><?php echo $coleccion->caratula ?></td>
+            <td><img src = "/AW-Practica03-main/ImagenesServidor/<?php echo $coleccion->caratula;?>" width="25%"/></td>
         </tr>
         <?php endforeach; ?>
 

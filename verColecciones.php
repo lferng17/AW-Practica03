@@ -45,7 +45,7 @@ $registros = $base->query("SELECT * FROM colecciones INNER JOIN usuarios_colecci
         <tr>
             <td><?php echo $coleccion->id ?></td>
             <td><?php echo $coleccion->nombre ?></td>
-            <td><?php echo $coleccion->caratula ?></td>
+            <td><img src = "/AW-Practica03-main/ImagenesServidor/<?php echo $coleccion->caratula;?>" width="25%"/></td>
             <td><a href="verCromos.php?id_coleccion=<?php echo $coleccion->id?>"><input type="button" value="Ver Cromos"></a></td>
         </tr>
         <?php endforeach; ?>

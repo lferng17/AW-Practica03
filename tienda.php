@@ -54,7 +54,7 @@
         <td><?php echo $coleccion->id?></td>
         <td><?php echo $coleccion->nombre?></td>
         <td><?php echo $coleccion->precio?></td>
-        <td><?php echo $coleccion->caratula?></td>
+        <td><img src = "/AW-Practica03-main/ImagenesServidor/<?php echo $coleccion->caratula;?>" width="25%"/></td>
         <td><a href="comprarColeccion.php?id=<?php echo $coleccion->id?>&precio=<?php echo$coleccion->precio?>"><input type="button" name="comprarCol" value="Comprar Colección"></a></td>
         <td><a href="comprarCromo.php?id_coleccion=<?php echo $coleccion->id?>"><input type="button" name="comprarCrom" value="Comprar Cromos"></a></td>
         </tr>
