@@ -1,7 +1,7 @@
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   overflow: hidden;
   background-color: #333;
 }
@@ -16,7 +16,7 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}
+}*/
   
 /* Change the link color to #111 (black) on hover */
 li a:hover {
@@ -43,4 +43,18 @@ tr td {
 
 body {
   background-color: #76b852;
+  margin: auto;
+}
+
+form {
+  margin: auto;
+  margin-top: 20px;
+  width: 90%;
+  text-align: center;
+}
+
+input {
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 5px;
 }
