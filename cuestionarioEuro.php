@@ -79,7 +79,7 @@ foreach ($usuario as $user) {
                     <td><input type="text" name="final2020"></td>
                 </tr>
                 <tr>
-                <td colspan=2> <input type="submit" value="ENVIAR PARA CORREGIR"></td>
+                <td colspan=2> <input type="submit" value="CORREGIR"></td>
                 </tr>
             </table>
         </form>

@@ -16,14 +16,6 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}*/
-  
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
-}
-.active {
-  background-color: #04AA6D;
 }
 
 
@@ -46,18 +38,67 @@ body {
   margin: auto;
 }
 
-form {
-  margin: auto;
-  margin-top: 20px;
-  width: 90%;
-  text-align: center;
-}
-
 input {
+  width: 10%;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 
 select {
   margin-bottom: 10px;
+}
+
+.fotoPasatiempo{
+  display: flex;
+  justify-content: center;
+}
+
+.fotoCuestionario{
+  display: flex;
+  justify-content: center;
+}
+
+#navBar:hover{
+  background-color: #ffaf27;
+}
+
+#principal {
+  margin: auto;
+  margin-top: 20px;
+  width: 90%;
+  text-align: center;
+}
+
+/*-------------- FORMS ---------------*/
+form {
+  margin: auto;
+  margin-top: 20px;
+  width: 90%;
+  text-align: center;
+  
+}
+
+input[type=text], select {
+  width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit]{
+  width: 10%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
 }
