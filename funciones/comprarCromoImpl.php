@@ -19,6 +19,9 @@ foreach ($usuario as $user) {
         $base->query("UPDATE cromos SET unidades=$unidades WHERE id=$id_cromo");
         header("Location: ../tienda.php");
     } else {
-        echo "NO TIENES SUFICIENTE SALDO PARA COMPRAR ESTE CROMO O EL CROMO NO ESTÁ DISPONIBLE. <a href='../tienda.php'>VOLVER A LA TIENDA</a>";
+        echo '<script language="javascript">';
+        echo 'alert("No tienes suficiente saldo para comprar este cromo o el cromo no está disponible.")';
+        echo '</script>';
+        echo "<script>location.href='../tienda.php';</script>"; 
     }
 }

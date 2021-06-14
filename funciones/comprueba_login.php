@@ -31,8 +31,10 @@ try {
         header("Location: ../tienda.php");
 
     } else {
-
-        echo 'El email o password es incorrecto, <a href="../login.php">vuelva a intenarlo</a>.<br/>';
+        echo '<script language="javascript">';
+        echo 'alert("El email o password es incorrecto.")';
+        echo '</script>';
+        echo "<script>location.href='../login.php';</script>"; 
     }
 } catch (Exception $e) {
     die("Error: " . $e->getMessage());

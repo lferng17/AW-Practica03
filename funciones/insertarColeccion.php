@@ -15,11 +15,17 @@ if($tamanio_imagen <= 1000000){ //Menor a un mega
         move_uploaded_file($_FILES['caratula']['tmp_name'], $carpeta_imagen.$nombre_imagen);    //Movemos la imagen del dir.temporal al escogido
         
     } else {
-        echo "Solo se pueden subir .jpeg, .jpg o .png";
+        echo '<script language="javascript">';
+        echo 'alert("Solo se pueden subir .jpeg, .jpg o .png")';
+        echo '</script>';
+        echo "<script>location.href='../crearColeccion.php';</script>"; 
     }
     
 } else {
-    echo "El tamaño de la imagen es muy grande";
+    echo '<script language="javascript">';
+    echo 'alert("El tamaño de la imagen es muy grande")';
+    echo '</script>';
+    echo "<script>location.href='../crearColeccion.php';</script>"; 
 }
 
 
@@ -37,7 +43,10 @@ $resultados = mysqli_query($conexion, $consulta);
 if ($resultados == false) {
     echo mysqli_error($conexion);
 } else {
-    "<div class='success'>Resgistro guardado, <a href='../crearColeccion.php'>volver atrás</a>.</div>";
+    echo '<script language="javascript">';
+    echo 'alert("Registro Guardado con éxito. Volviendo atrás")';
+    echo '</script>';
+    echo "<script>location.href='../crearColeccion.php';</script>"; 
 }
 
 mysqli_close($conexion);
