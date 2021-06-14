@@ -1,10 +1,9 @@
 <?php
 include("conexion_BBDD_PDO.php");
-session_start();
-if (!isset($_SESSION["usuario"])) {
+if (!isset($_COOKIE["usuario"])) {
     header("Location:../login.php");
 }
-$usuario = $base->query("SELECT * FROM usuarios WHERE usuario='" . $_SESSION["usuario"] . "'")->fetchAll(PDO::FETCH_OBJ);
+$usuario = $base->query("SELECT * FROM usuarios WHERE usuario='" . $_COOKIE["usuario"] . "'")->fetchAll(PDO::FETCH_OBJ);
 $id_coleccion = $_GET["id"];
 $precio = $_GET["precio"];
 foreach ($usuario as $user) {

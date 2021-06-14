@@ -1,14 +1,14 @@
 <?php
     session_start();
 
-    if (!isset($_SESSION["admin"])) {
+    if (!isset($_COOKIE["admin"])&&!isset($_COOKIE["usuario"])) {
         header("Location:login.php");
     }
 
 ?>
 <?php
     include("funciones/conexion_BBDD_PDO.php");
-    $usuario=$base->query("SELECT * FROM usuarios WHERE usuario='".$_SESSION["usuario"]."'")->fetchAll(PDO::FETCH_OBJ);
+    $usuario=$base->query("SELECT * FROM usuarios WHERE usuario='".$_COOKIE["usuario"]."'")->fetchAll(PDO::FETCH_OBJ);
     foreach($usuario as $user){
         $id_usuario=$user->id_user;
         $saldo_usuario=$user->saldo;
@@ -28,7 +28,7 @@
 
 <body>
 <?php
-    if (isset($_SESSION["admin"])) {
+    if (isset($_COOKIE["admin"])) {
         include("navbar.php");
     } else{
         include("navbarSoc.php");

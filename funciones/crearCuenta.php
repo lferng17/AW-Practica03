@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include("conexion_BBDD_PDO.php");
     $nuevoUsuario = $_POST["usuario"];
     $nuevaPass = $_POST["pass"];

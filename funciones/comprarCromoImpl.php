@@ -1,11 +1,10 @@
 <?php
-session_start();
-if (!isset($_SESSION["usuario"])) {
+if (!isset($_COOKIE["usuario"])) {
     header("Location: ../login.php");
 }
 $id_cromo = $_GET["id"];
 include("conexion_BBDD_PDO.php");
-$usuario = $base->query("SELECT * FROM usuarios WHERE usuario='" . $_SESSION["usuario"] . "'")->fetchAll(PDO::FETCH_OBJ);
+$usuario = $base->query("SELECT * FROM usuarios WHERE usuario='" . $_COOKIE["usuario"] . "'")->fetchAll(PDO::FETCH_OBJ);
 $precio = $_GET["precio"];
 $unidades =$_GET["unidades"];
 foreach ($usuario as $user) {

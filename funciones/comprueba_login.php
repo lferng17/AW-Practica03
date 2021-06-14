@@ -18,15 +18,13 @@ try {
 
     if ($numero_registro != 0) {
 
-        session_start();
+        setcookie("usuario", "$usuario", time()+(30*60),"/AW-Practica03-main/");
 
         $admin = $resultado->fetchColumn(3);
 
         if ($admin==1){
-            $_SESSION["admin"] = 1;
+            setcookie("admin", $admin, time()+(30*60),"/AW-Practica03-main/");
         }
-
-        $_SESSION["usuario"] = $_POST["usuario"];
 
         header("Location: ../tienda.php");
 

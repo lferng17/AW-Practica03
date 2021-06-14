@@ -1,4 +1,7 @@
 <?php
+if (!isset($_COOKIE["usuario"])&&!isset($_COOKIE["admin"])) {
+    header("Location: ../login.php");
+}
 $nombre = $_POST["nombre"];
 $precio = $_POST["precio"];
 $estado = $_POST["estado"];
