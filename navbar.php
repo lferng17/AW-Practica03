@@ -9,7 +9,7 @@
 <body>
     <div id="navegador">
         <ul>
-        <li style="float:left"> <img src = "/AW-Practica03-main/ImagenesServidor/logo.png" width="100" /></li>
+            <li style="float:left"> <img src = "/AW-Practica03-main/ImagenesServidor/logo.png" width="100" /></li>
             <li><a href="crearColeccion.php">CREAR COLECCIÓN</a></li>
             <li><a href="crearCromo.php">CREAR CROMO</a></li>
             <li style="float:right"><a href="funciones/cerrar_sesion.php">CERRAR SESION</a></li>
