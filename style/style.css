@@ -38,8 +38,8 @@ body {
   margin: auto;
 }
 
-input {
-  width: 10%;
+input[type=button]{
+  width: 40%;
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -48,25 +48,26 @@ select {
   margin-bottom: 10px;
 }
 
-.fotoPasatiempo{
-  display: flex;
-  justify-content: center;
-}
-
-.fotoCuestionario{
-  display: flex;
-  justify-content: center;
-}
-
 #navBar:hover{
   background-color: #ffaf27;
 }
 
-#principal {
+#index {
   margin: auto;
   margin-top: 20px;
   width: 90%;
   text-align: center;
+}
+
+input[type=number]{
+  width: 8%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 /*-------------- FORMS ---------------*/
@@ -90,7 +91,7 @@ input[type=text], select {
 
 input[type=submit]{
   width: 10%;
-  background-color: #4CAF50;
+  background-color: #ffaf27;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -100,5 +101,39 @@ input[type=submit]{
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #ffa200;
+}
+
+/*-------------- GANAR PUNTOS ---------------*/
+
+.fotoPasatiempo{
+  display: flex;
+  justify-content: center;
+}
+
+.fotoCuestionario{
+  display: flex;
+  justify-content: center;
+}
+
+input[type=text][class=cuestionarioEuro]{
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+input[type=number][class=cuestionarioEuro]{
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }

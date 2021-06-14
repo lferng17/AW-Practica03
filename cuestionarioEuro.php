@@ -1,9 +1,11 @@
 <?php
-if (!isset($_COOKIE["usuario"])) {
+session_start();
+
+if (!isset($_SESSION["usuario"])) {
     header("Location:login.php");
 }
 include("funciones/conexion_BBDD_PDO.php");
-$usuario = $base->query("SELECT * FROM usuarios WHERE usuario='" . $_COOKIE["usuario"] . "'")->fetchAll(PDO::FETCH_OBJ);
+$usuario = $base->query("SELECT * FROM usuarios WHERE usuario='" . $_SESSION["usuario"] . "'")->fetchAll(PDO::FETCH_OBJ);
 foreach ($usuario as $user) {
     $id_usuario = $user->id_user;
     $saldo_usuario = $user->saldo;
@@ -21,7 +23,7 @@ foreach ($usuario as $user) {
 
 <body>
 <?php
-    if (isset($_COOKIE["admin"])) {
+    if (isset($_SESSION["admin"])) {
         include("navbar.php");
     } else{
         include("navbarSoc.php");
@@ -33,11 +35,11 @@ foreach ($usuario as $user) {
             <table>
                 <tr>
                     <td><label>1. ¿Quíen es el máximo goleador de la historia de la Eurocopa?</label></td>
-                    <td><input type="text" name="goleador"></td>
+                    <td><input type="text" class="cuestionarioEuro" name="goleador"></td>
                 </tr>
                 <tr>
                     <td><label>2. ¿Qué selección es la primera en la clasificación histórica de la Eurocopa?</label></td>
-                    <td><input type="text" name="primera"></td>
+                    <td><input type="text" class="cuestionarioEuro" name="primera"></td>
                 </tr>
                 <tr>
                     <td>3. ¿Cuál de estas selecciones NO tiene 3 Eurocopas?</td>
@@ -52,31 +54,31 @@ foreach ($usuario as $user) {
                 </tr>
                 <tr>
                     <td><label>4. ¿Quíen es el máximo goleador de la historia de la Selección Española?</label></td>
-                    <td><input type="text" name="golspa"></td>
+                    <td><input type="text" class="cuestionarioEuro" name="golspa"></td>
                 </tr>
                 <tr>
                     <td><label>5. ¿En que año ganó la Selección Portuguesa su único título?</label></td>
-                    <td><input type="number" name="poraño"></td>
+                    <td><input type="number" class="cuestionarioEuro" name="poraño"></td>
                 </tr>
                 <tr>
                     <td><label>6. ¿Quién marcó el único gol de la final de la Eurocopa 2008?</label></td>
-                    <td><input type="text" name="gol2008"></td>
+                    <td><input type="text" class="cuestionarioEuro" name="gol2008"></td>
                 </tr>
                 <tr>
                     <td><label>7. ¿Quién ganó la Eurocopa 2002 celebrada en Korea?</label></td>
-                    <td><input type="text" name="eurokor"></td>
+                    <td><input type="text" class="cuestionarioEuro" name="eurokor"></td>
                 </tr>
                 <tr>
                     <td><label>8. ¿Cúantas veces ha llegado la Selección Española a la final de la Eurocopa?</label></td>
-                    <td><input type="number" name="vecesspa"></td>
+                    <td><input type="number" class="cuestionarioEuro" name="vecesspa"></td>
                 </tr>
                 <tr>
                     <td><label>9. ¿En que año se celebró la Eurocopa en España?</label></td>
-                    <td><input type="number" name="añocelspa"></td>
+                    <td><input type="number" class="cuestionarioEuro" name="añocelspa"></td>
                 </tr>
                 <tr>
                     <td><label>10. ¿En qué estadio se celebrará la final de la Eurocopa de 2020?</label></td>
-                    <td><input type="text" name="final2020"></td>
+                    <td><input type="text" class="cuestionarioEuro" name="final2020"></td>
                 </tr>
                 <tr>
                 <td colspan=2> <input type="submit" value="CORREGIR"></td>
