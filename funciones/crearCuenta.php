@@ -8,6 +8,6 @@
         echo "<div class='error'>LO SIENTO, YA HAY UN SOCIO CON ESE NOMBRE DE USUARIO. <a href='registrar.html'>VUELVA A INTENTARLO</a></div>";
     } else{
         $base->query("INSERT INTO usuarios(usuario,contraseña,admin,saldo) VALUES ('$nuevoUsuario', '$nuevaPass', 0, 0)");
-        echo"<div class='success'>USUARIO CREADO CON ÉXITO, YA PUEDE <a href='login.php'>INICIAR SESIÓN</a></div>";
+        echo"<div class='success'>USUARIO CREADO CON ÉXITO, YA PUEDE <a href='../login.php'>INICIAR SESIÓN</a></div>";
     }
 ?>

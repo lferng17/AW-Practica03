@@ -7,7 +7,7 @@
 
 ?>
 <?php
-    include("conexion_BBDD_PDO.php");
+    include("funciones/conexion_BBDD_PDO.php");
     $usuario=$base->query("SELECT * FROM usuarios WHERE usuario='".$_SESSION["usuario"]."'")->fetchAll(PDO::FETCH_OBJ);
     foreach($usuario as $user){
         $id_usuario=$user->id_user;
@@ -52,7 +52,7 @@
         <td><?php echo $coleccion->nombre?></td>
         <td><?php echo $coleccion->precio?></td>
         <td><img src = "/AW-Practica03-main/ImagenesServidor/<?php echo $coleccion->caratula;?>" width="25%"/></td>
-        <td><a href="comprarColeccion.php?id=<?php echo $coleccion->id?>&precio=<?php echo$coleccion->precio?>"><input type="button" name="comprarCol" value="Comprar Colección"></a></td>
+        <td><a href="funciones/comprarColeccion.php?id=<?php echo $coleccion->id?>&precio=<?php echo$coleccion->precio?>"><input type="button" name="comprarCol" value="Comprar Colección"></a></td>
         <td><a href="comprarCromo.php?id_coleccion=<?php echo $coleccion->id?>"><input type="button" name="comprarCrom" value="Comprar Cromos"></a></td>
         </tr>
 

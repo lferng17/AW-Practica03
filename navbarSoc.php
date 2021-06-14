@@ -9,7 +9,7 @@
 <body>
     <div id="navegador">
         <ul>
-            <li style="float:right"><a href="cerrar_sesion.php">CERRAR SESION</a></li>
+            <li style="float:right"><a href="funciones/cerrar_sesion.php">CERRAR SESION</a></li>
             <li><a href="tienda.php">TIENDA</a></li>
             <li><a href="verColecciones.php">VER LA COLECCIÓN</a></li>
             <li><a href="ganarPuntos.php">GANAR PUNTOS</a></li>

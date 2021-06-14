@@ -2,7 +2,7 @@
 include("conexion_BBDD_PDO.php");
 session_start();
 if (!isset($_SESSION["usuario"])) {
-    header("Location:login.php");
+    header("Location:../login.php");
 }
 $usuario = $base->query("SELECT * FROM usuarios WHERE usuario='" . $_SESSION["usuario"] . "'")->fetchAll(PDO::FETCH_OBJ);
 $id_coleccion = $_GET["id"];
@@ -17,11 +17,11 @@ foreach ($usuario as $user) {
             $base->query("INSERT INTO usuarios_colecciones VALUES ($id_usuario, $id_coleccion)");
             $saldo_usuario=$saldo_usuario-$precio;
             $base->query("UPDATE usuarios SET saldo=$saldo_usuario WHERE id_user=$id_usuario");
-            header("Location: tienda.php");
+            header("Location: ../tienda.php");
         } else {
-            echo "NO TIENES SUFICIENTE SALDO PARA COMPRAR ESTA COLECCIÓN. <a href='tienda.php'>VOLVER A LA TIENDA</a>";
+            echo "NO TIENES SUFICIENTE SALDO PARA COMPRAR ESTA COLECCIÓN. <a href='../tienda.php'>VOLVER A LA TIENDA</a>";
         }
     } else {
-        echo "YA TIENES ESTA COLECCIÓN COMPRADA. <a href='tienda.php'>VOLVER A LA TIENDA</a><br>";
+        echo "YA TIENES ESTA COLECCIÓN COMPRADA. <a href='../tienda.php'>VOLVER A LA TIENDA</a><br>";
     }
 }

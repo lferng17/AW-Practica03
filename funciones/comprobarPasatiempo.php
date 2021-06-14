@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION["usuario"])) {
-    header("Location:login.php");
+    header("Location: ../login.php");
 }
 include("conexion_BBDD_PDO.php");
     $usuario=$base->query("SELECT * FROM usuarios WHERE usuario='".$_SESSION["usuario"]."'")->fetchAll(PDO::FETCH_OBJ);
@@ -30,8 +30,8 @@ include("conexion_BBDD_PDO.php");
     if($palabra1=="pata"&&$palabra2=="paca"&&$palabra3=="capa"&&$palabra4=="napa"&&$palabra5=="pana"&&$palabra6=="pena"&&$palabra7=="remota"&&$palabra8=="remoto"&&$palabra9=="motero"&&$palabra10=="motera"&&$palabra11=="matero"&&$palabra12=="retamo"){
         $nuevoSaldo=$saldo_usuario+30;
         $base->query("UPDATE usuarios SET saldo=$nuevoSaldo WHERE id_user=$id_usuario");
-        echo "<div class='success'>FELICIDADES, HAS COMPLETADO EL PASATIEMPOS Y GANADO 50 PUNTOS. PODRÁS GASTAR ESOS PUNTOS EN <a href='tienda.php'>NUESTRA TIENDA</a></div>";
+        echo "<div class='success'>FELICIDADES, HAS COMPLETADO EL PASATIEMPOS Y GANADO 50 PUNTOS. PODRÁS GASTAR ESOS PUNTOS EN <a href='../tienda.php'>NUESTRA TIENDA</a></div>";
     } else{
-        echo "<div class='error'>NO, HAS FALLADO! AUNQUE PUEDES <a href='pasatiempos.php'>VOLVER A INTENTARLO</a></div>";
+        echo "<div class='error'>NO, HAS FALLADO! AUNQUE PUEDES <a href='../pasatiempos.php'>VOLVER A INTENTARLO</a></div>";
     }
     ?>

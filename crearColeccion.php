@@ -6,7 +6,7 @@ if (!isset($_SESSION["admin"])) {
 }
 ?>
 <?php
-    include("conexion_BBDD_PDO.php");
+    include("funciones/conexion_BBDD_PDO.php");
     $usuario=$base->query("SELECT * FROM usuarios WHERE usuario='".$_SESSION["usuario"]."'")->fetchAll(PDO::FETCH_OBJ);
     foreach($usuario as $user){
         $id_usuario=$user->id_user;
@@ -32,7 +32,7 @@ if (!isset($_SESSION["admin"])) {
         include("navbarSoc.php");
     }
     ?>
-    <form action="insertarColeccion.php" method="post" name="formColeccion" enctype="multipart/form-data">
+    <form action="funciones/insertarColeccion.php" method="post" name="formColeccion" enctype="multipart/form-data">
         Nombre: <br>
         <input type="text" name="nombre" required> <br>
         Precio: <br>

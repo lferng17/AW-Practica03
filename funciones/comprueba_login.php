@@ -28,11 +28,11 @@ try {
 
         $_SESSION["usuario"] = $_POST["usuario"];
 
-        header("Location: tienda.php");
+        header("Location: ../tienda.php");
 
     } else {
 
-        echo 'El email o password es incorrecto, <a href="login.php">vuelva a intenarlo</a>.<br/>';
+        echo 'El email o password es incorrecto, <a href="../login.php">vuelva a intenarlo</a>.<br/>';
     }
 } catch (Exception $e) {
     die("Error: " . $e->getMessage());

@@ -11,7 +11,7 @@
 
     <div class="login-page">
         <div class="form">
-            <form action="comprueba_login.php" method="post" class="login-form">
+            <form action="funciones/comprueba_login.php" method="post" class="login-form">
 
                 <input type="text" name="usuario" placeholder="usuario" />
                 <input type="password" name="pass" placeholder="contraseña" />

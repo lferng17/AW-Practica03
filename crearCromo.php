@@ -7,7 +7,7 @@
 
 ?>
 <?php
-    include("conexion_BBDD_PDO.php");
+    include("funciones/conexion_BBDD_PDO.php");
     $usuario=$base->query("SELECT * FROM usuarios WHERE usuario='".$_SESSION["usuario"]."'")->fetchAll(PDO::FETCH_OBJ);
     foreach($usuario as $user){
         $id_usuario=$user->id_user;
@@ -34,7 +34,7 @@
         include("navbarSoc.php");
     }
     ?>
-    <form action="insertarCromo.php" method="post" name="formCromo" enctype="multipart/form-data">
+    <form action="funciones/insertarCromo.php" method="post" name="formCromo" enctype="multipart/form-data">
         <div>
             Nombre: <br>
             <input type="text" name="nombre" id="nombre" required> <br>

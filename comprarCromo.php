@@ -4,7 +4,7 @@ if (!isset($_SESSION["usuario"])) {
     header("Location:login.php");
 }
 $id_coleccion = $_GET["id_coleccion"];
-include("conexion_BBDD_PDO.php");
+include("funciones/conexion_BBDD_PDO.php");
 $usuario = $base->query("SELECT * FROM usuarios WHERE usuario='" . $_SESSION["usuario"] . "'")->fetchAll(PDO::FETCH_OBJ);
 foreach ($usuario as $user) {
     $id_usuario = $user->id_user;
@@ -50,7 +50,7 @@ $registros = $base->query("SELECT * FROM cromos WHERE id_coleccion = $id_colecci
                 <td><?php echo $cromo->precio ?></td>
                 <td><img src="/AW-Practica03-main/ImagenesServidor/<?php echo $cromo->caratula; ?>" width="25%" /></td>
                 <td><?php echo $cromo->unidades ?></td>
-                <td><a href="comprarCromoImpl.php?id=<?php echo $cromo->id ?>&precio=<?php echo $cromo->precio ?>&unidades=<?php echo $cromo->unidades ?>"><input type="button" name="comprarCol" value="Comprar"></a></td>
+                <td><a href="funciones/comprarCromoImpl.php?id=<?php echo $cromo->id ?>&precio=<?php echo $cromo->precio ?>&unidades=<?php echo $cromo->unidades ?>"><input type="button" name="comprarCol" value="Comprar"></a></td>
             </tr>
         <?php endforeach; ?>
     </table>

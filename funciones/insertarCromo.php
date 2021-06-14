@@ -40,7 +40,7 @@
     if($resultados==false){
         echo "Error en la consulta";
     } else {
-        echo "<div class='success'>Resgistro guardado, <a href='crearCromo.php'>volver atrás</a>.</div>";
+        echo "<div class='success'>Resgistro guardado, <a href='../crearCromo.php'>volver atrás</a>.</div>";
     }
 
     mysqli_close($conexion);

@@ -37,7 +37,7 @@ $resultados = mysqli_query($conexion, $consulta);
 if ($resultados == false) {
     echo mysqli_error($conexion);
 } else {
-    "<div class='success'>Resgistro guardado, <a href='crearColeccion.php'>volver atrás</a>.</div>";
+    "<div class='success'>Resgistro guardado, <a href='../crearColeccion.php'>volver atrás</a>.</div>";
 }
 
 mysqli_close($conexion);

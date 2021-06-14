@@ -4,7 +4,7 @@ session_start();
 if (!isset($_SESSION["usuario"])) {
     header("Location:login.php");
 }
-include("conexion_BBDD_PDO.php");
+include("funciones/conexion_BBDD_PDO.php");
 $usuario = $base->query("SELECT * FROM usuarios WHERE usuario='" . $_SESSION["usuario"] . "'")->fetchAll(PDO::FETCH_OBJ);
 foreach ($usuario as $user) {
     $id_usuario = $user->id_user;
@@ -31,7 +31,7 @@ foreach ($usuario as $user) {
     ?>
     
     <div class="form">
-        <form action="compruebaCuest.php" method="get">
+        <form action="funciones/compruebaCuest.php" method="get">
             <table>
                 <tr>
                     <td><label>1. ¿Quíen es el máximo goleador de la historia de la Eurocopa?</label></td>

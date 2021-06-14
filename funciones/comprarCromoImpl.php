@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["usuario"])) {
-    header("Location:login.php");
+    header("Location: ../login.php");
 }
 $id_cromo = $_GET["id"];
 include("conexion_BBDD_PDO.php");
@@ -17,8 +17,8 @@ foreach ($usuario as $user) {
         $unidades=$unidades-1;
         $base->query("UPDATE usuarios SET saldo=$saldo_usuario WHERE id_user=$id_usuario");
         $base->query("UPDATE cromos SET unidades=$unidades WHERE id=$id_cromo");
-        header("Location: tienda.php");
+        header("Location: ../tienda.php");
     } else {
-        echo "NO TIENES SUFICIENTE SALDO PARA COMPRAR ESTE CROMO O EL CROMO NO ESTÁ DISPONIBLE. <a href='tienda.php'>VOLVER A LA TIENDA</a>";
+        echo "NO TIENES SUFICIENTE SALDO PARA COMPRAR ESTE CROMO O EL CROMO NO ESTÁ DISPONIBLE. <a href='../tienda.php'>VOLVER A LA TIENDA</a>";
     }
 }

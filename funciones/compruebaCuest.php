@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION["usuario"])) {
-    header("Location:login.php");
+    header("Location:../login.php");
 }
 include("conexion_BBDD_PDO.php");
 $usuario = $base->query("SELECT * FROM usuarios WHERE usuario='" . $_SESSION["usuario"] . "'")->fetchAll(PDO::FETCH_OBJ);
@@ -59,5 +59,5 @@ foreach ($usuario as $user) {
     $saldo_usuario = $saldo_usuario + $saldoextra;
     $sql="UPDATE usuarios SET saldo = $saldo_usuario WHERE id_user = $id_usuario";
     $update = $base->query($sql);
-    echo "FELICIDADES! HAS GANADO ". $saldoextra." PUNTOS CONTESTANDO AL CUESTIONARIO. PUEDES GASTAR LOS NUEVOS PUNTOS EN NUESTRA <a href='tienda.php'>TIENDA</a>";
+    echo "FELICIDADES! HAS GANADO ". $saldoextra." PUNTOS CONTESTANDO AL CUESTIONARIO. PUEDES GASTAR LOS NUEVOS PUNTOS EN NUESTRA <a href='../tienda.php'>TIENDA</a>";
 ?>
