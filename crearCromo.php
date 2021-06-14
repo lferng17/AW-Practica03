@@ -48,7 +48,7 @@
             </select>
             <br>
             <label>Carátula: <br>
-            <input type="file" name="caratula" id="caratula" required><br>
+            <input type="file" name="caratula" id="caratula" required><br><br>
             Unidades: <br>
             <input type="text" name="unidades" id="unidades" required><br><br>
 

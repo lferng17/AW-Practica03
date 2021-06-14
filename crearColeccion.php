@@ -38,9 +38,9 @@ if (!isset($_SESSION["admin"])) {
         Precio: <br>
         <input type="text" name="precio" required> <br>
         Carátula: <br>
-        <input type="file" name="caratula" required> <br>
-        Estado(0 para agotado, 1 para activo): <br>
-        <input type="number" name="estado" required> <br><br>
+        <input type="file" name="caratula" required> <br><br>
+        Estado(0 para agotado, 1 para activo): <br><br>
+        <input type="number" name="estado" min="0" max="1" required> <br><br>
         <input type="submit" name="subir" value="Enviar">
     </form>
 </body>
