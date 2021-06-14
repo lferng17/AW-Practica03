@@ -14,6 +14,7 @@
         $saldo_usuario=$user->saldo;
         $nombre_usuario=$user->usuario;
     }
+    $registros=$base->query("SELECT * FROM colecciones")->fetchAll(PDO::FETCH_OBJ);
 ?>
 
 <!DOCTYPE html>
@@ -39,9 +40,14 @@
             <input type="text" name="nombre" id="nombre" required> <br>
             Precio: <br>
             <input type="text" name="precio" id="precio" required> <br>
-            Álbum:<br>
-            <input type="text" name="album" id="album" required><br>
-            Carátula: <br>
+            <label for="coleccion">Colección:</label><br>
+            <select name="coleccion" id="coleccion">
+                <?php foreach($registros as $coleccion):?>
+                    <option value="<?php echo $coleccion->id?>"><?php echo $coleccion->nombre?></option>
+                <?php endforeach?>
+            </select>
+            <br>
+            <label>Carátula: <br>
             <input type="file" name="caratula" id="caratula" required><br>
             Unidades: <br>
             <input type="text" name="unidades" id="unidades" required><br><br>

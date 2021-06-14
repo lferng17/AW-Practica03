@@ -1,7 +1,7 @@
 <?php
 $nombre = $_POST["nombre"];
 $precio = $_POST["precio"];
-//$caratula = $_POST["caratula"];
+$estado = $_POST["estado"];
 
 $nombre_imagen = $_FILES['caratula']['name']; //Primer corchete referencia al name del input type de crearCromo
 $tamanio_imagen = $_FILES['caratula']['size'];
@@ -31,13 +31,13 @@ if (mysqli_connect_errno()) {
 mysqli_select_db($conexion, $db_nombre) or die("No se encuentra la BBDD");
 
 mysqli_set_charset($conexion, "utf8");
-$consulta = "INSERT INTO colecciones (nombre, precio, caratula) VALUES ('$nombre', '$precio', '$nombre_imagen')";
+$consulta = "INSERT INTO colecciones (nombre, precio, caratula, estado) VALUES ('$nombre', '$precio', '$nombre_imagen', $estado)";
 $resultados = mysqli_query($conexion, $consulta);
 
 if ($resultados == false) {
     echo mysqli_error($conexion);
 } else {
-    "Resgistro guardado";
+    "<div class='success'>Resgistro guardado, <a href='crearColeccion.php'>volver atrás</a>.</div>";
 }
 
 mysqli_close($conexion);
