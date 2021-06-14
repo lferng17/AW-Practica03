@@ -26,7 +26,13 @@
 </head>
 
 <body>
-    <?php include("navbar.php");?>
+<?php
+    if (isset($_SESSION["admin"])) {
+        include("navbar.php");
+    } else{
+        include("navbarSoc.php");
+    }
+    ?>
     <form action="insertarCromo.php" method="post" name="formCromo" enctype="multipart/form-data">
         <div>
             Nombre: <br>

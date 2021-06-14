@@ -24,7 +24,13 @@ $registros = $base->query("SELECT * FROM cromos INNER JOIN usuarios_cromos ON cr
 
 <body>
     
-<?php include("navbar.php");?>
+<?php
+    if (isset($_SESSION["admin"])) {
+        include("navbar.php");
+    } else{
+        include("navbarSoc.php");
+    }
+    ?>
 
     <table>
         <tr>

@@ -14,7 +14,7 @@
         $saldo_usuario=$user->saldo;
         $nombre_usuario=$user->usuario;
     }
-    $registros=$base->query("SELECT * FROM colecciones")->fetchAll(PDO::FETCH_OBJ);
+    $registros=$base->query("SELECT * FROM colecciones WHERE estado=1")->fetchAll(PDO::FETCH_OBJ);
 
 ?>
 
@@ -28,7 +28,13 @@
 </head>
 
 <body>
-    <?php include("navbar.php");?>
+<?php
+    if (isset($_SESSION["admin"])) {
+        include("navbar.php");
+    } else{
+        include("navbarSoc.php");
+    }
+    ?>
     <table>
         <tr>
             <td>ID</td>

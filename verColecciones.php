@@ -10,7 +10,7 @@ foreach ($usuario as $user) {
     $saldo_usuario = $user->saldo;
     $nombre_usuario = $user->usuario;
 }
-$registros = $base->query("SELECT * FROM colecciones INNER JOIN usuarios_colecciones ON colecciones.id = usuarios_colecciones.id_coleccion WHERE usuarios_colecciones.id_usuario=$id_usuario")->fetchAll(PDO::FETCH_OBJ);
+$registros = $base->query("SELECT * FROM colecciones INNER JOIN usuarios_colecciones ON colecciones.id = usuarios_colecciones.id_coleccion WHERE usuarios_colecciones.id_usuario=$id_usuario AND colecciones.estado=1")->fetchAll(PDO::FETCH_OBJ);
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,7 +22,13 @@ $registros = $base->query("SELECT * FROM colecciones INNER JOIN usuarios_colecci
 </head>
 
 <body>
-    <?php include("navbar.php");?>
+<?php
+    if (isset($_SESSION["admin"])) {
+        include("navbar.php");
+    } else{
+        include("navbarSoc.php");
+    }
+    ?>
     <table>
         <tr>
             <td>ID</td>

@@ -22,7 +22,13 @@ foreach ($usuario as $user) {
 </head>
 
 <body>
-    <?php include("navbar.php");?>
+<?php
+    if (isset($_SESSION["admin"])) {
+        include("navbar.php");
+    } else{
+        include("navbarSoc.php");
+    }
+    ?>
     
     <div class="form">
         <form action="compruebaCuest.php" method="get">

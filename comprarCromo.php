@@ -24,7 +24,14 @@ $registros = $base->query("SELECT * FROM cromos WHERE id_coleccion = $id_colecci
 </head>
 
 <body>
-    <?php include("navbar.php");?>
+    <?php
+    if (isset($_SESSION["admin"])) {
+        include("navbar.php");
+    } else{
+        include("navbarSoc.php");
+    }
+    ?>
+
     <table>
         <tr>
             <td>ID</td>
@@ -41,7 +48,7 @@ $registros = $base->query("SELECT * FROM cromos WHERE id_coleccion = $id_colecci
                 <td><?php echo $cromo->id ?></td>
                 <td><?php echo $cromo->nombre ?></td>
                 <td><?php echo $cromo->precio ?></td>
-                <td><img src = "/AW-Practica03-main/ImagenesServidor/<?php echo $cromo->caratula;?>" width="25%"/></td>
+                <td><img src="/AW-Practica03-main/ImagenesServidor/<?php echo $cromo->caratula; ?>" width="25%" /></td>
                 <td><?php echo $cromo->unidades ?></td>
                 <td><a href="comprarCromoImpl.php?id=<?php echo $cromo->id ?>&precio=<?php echo $cromo->precio ?>&unidades=<?php echo $cromo->unidades ?>"><input type="button" name="comprarCol" value="Comprar"></a></td>
             </tr>

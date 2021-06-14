@@ -17,7 +17,7 @@
                 <input type="password" name="pass" placeholder="contraseña" />
                 <button type="submit">Entrar</button>
                 
-                <p class="message">¿No estás registrado? <a href="#">Crear cuenta</a></p>
+                <p class="message">¿No estás registrado? <a href="registrar.html">Crear cuenta</a></p>
 
             </form>
         </div>

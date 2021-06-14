@@ -25,7 +25,13 @@ if (!isset($_SESSION["admin"])) {
 </head>
 
 <body>
-    <?php include("navbar.php");?>
+<?php
+    if (isset($_SESSION["admin"])) {
+        include("navbar.php");
+    } else{
+        include("navbarSoc.php");
+    }
+    ?>
     <form action="insertarColeccion.php" method="post" name="formColeccion" enctype="multipart/form-data">
         Nombre: <br>
         <input type="text" name="nombre" required> <br>
