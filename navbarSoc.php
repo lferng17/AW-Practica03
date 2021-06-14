@@ -9,6 +9,7 @@
 <body>
     <div id="navegador">
         <ul>
+        <li style="float:left"> <img src = "/AW-Practica03-main/ImagenesServidor/logo.png" width="100" /></li>
             <li style="float:right"><a href="funciones/cerrar_sesion.php">CERRAR SESION</a></li>
             <li><a href="tienda.php">TIENDA</a></li>
             <li><a href="verColecciones.php">VER LA COLECCIÓN</a></li>
