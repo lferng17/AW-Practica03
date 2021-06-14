@@ -12,7 +12,7 @@
             <li style="float:left"> <img src = "/AW-Practica03-main/ImagenesServidor/logo.png" width="100" /></li>
             <li id="navBar"><a href="crearColeccion.php">CREAR COLECCIÓN</a></li>
             <li id="navBar"><a href="crearCromo.php">CREAR CROMO</a></li>
-            <li id="navBar" style="float:right"><a href="principal.html">CERRAR SESION</a></li>
+            <li id="navBar" style="float:right"><a href="index.html">CERRAR SESION</a></li>
             <li id="navBar"><a href="tienda.php">TIENDA</a></li>
             <li id="navBar"><a href="verColecciones.php">VER LA COLECCIÓN</a></li>
             <li id="navBar"><a href="ganarPuntos.php">GANAR PUNTOS</a></li>
