@@ -1,3 +1,8 @@
+<?php
+    if(isset($_COOKIE["usuario"])){
+        header("Location: tienda.php");
+    }
+?>
 <!DOCTYPE html>
 <html>
 
