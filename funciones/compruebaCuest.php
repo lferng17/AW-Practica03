@@ -59,5 +59,8 @@ foreach ($usuario as $user) {
     $saldo_usuario = $saldo_usuario + $saldoextra;
     $sql="UPDATE usuarios SET saldo = $saldo_usuario WHERE id_user = $id_usuario";
     $update = $base->query($sql);
-    echo "FELICIDADES! HAS GANADO ". $saldoextra." PUNTOS CONTESTANDO AL CUESTIONARIO. PUEDES GASTAR LOS NUEVOS PUNTOS EN NUESTRA <a href='../tienda.php'>TIENDA</a>";
+    echo '<script language="javascript">';
+    echo "alert('¡Felicidades!, has ganado $saldoextra puntos contestando al cuestionario. Te redigiremos a nuestra tienda para gastarlos')";
+    echo '</script>';
+    echo "<script>location.href='../tienda.php';</script>"; 
 ?>

@@ -5,9 +5,15 @@
     $nuevaPass = $_POST["pass"];
     $usuarios=$base->query("SELECT * FROM usuarios WHERE usuario='$nuevoUsuario'")->fetchAll(PDO::FETCH_OBJ);
     if($usuarios){
-        echo "<div class='error'>LO SIENTO, YA HAY UN SOCIO CON ESE NOMBRE DE USUARIO. <a href='registrar.html'>VUELVA A INTENTARLO</a></div>";
+        echo '<script language="javascript">';
+        echo 'alert("Lo siento, ya hay un socio con ese nombre de usuario. Vuelva a intentarlo.")';
+        echo '</script>';
+        echo "<script>location.href='../registrar.html';</script>"; 
     } else{
         $base->query("INSERT INTO usuarios(usuario,contraseña,admin,saldo) VALUES ('$nuevoUsuario', '$nuevaPass', 0, 0)");
-        echo"<div class='success'>USUARIO CREADO CON ÉXITO, YA PUEDE <a href='../login.php'>INICIAR SESIÓN</a></div>";
+        echo '<script language="javascript">';
+        echo 'alert("Usuario creado con éxito. Ya puede iniciar sesión")';
+        echo '</script>';
+        echo "<script>location.href='../login.php';</script>"; 
     }
 ?>

@@ -19,9 +19,15 @@ foreach ($usuario as $user) {
             $base->query("UPDATE usuarios SET saldo=$saldo_usuario WHERE id_user=$id_usuario");
             header("Location: ../tienda.php");
         } else {
-            echo "NO TIENES SUFICIENTE SALDO PARA COMPRAR ESTA COLECCIÓN. <a href='../tienda.php'>VOLVER A LA TIENDA</a>";
+            echo '<script language="javascript">';
+            echo 'alert("No tienes suficiente saldo para comprar esta colección.")';
+            echo '</script>';
+            echo "<script>location.href='../tienda.php';</script>"; 
         }
     } else {
-        echo "YA TIENES ESTA COLECCIÓN COMPRADA. <a href='../tienda.php'>VOLVER A LA TIENDA</a><br>";
+        echo '<script language="javascript">';
+        echo 'alert("Ya tiene esta colección comprada.")';
+        echo '</script>';
+        echo "<script>location.href='../tienda.php';</script>"; 
     }
 }
