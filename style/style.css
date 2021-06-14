@@ -61,3 +61,10 @@ input {
 select {
   margin-bottom: 10px;
 }
+
+#principal {
+  margin: auto;
+  margin-top: 20px;
+  width: 90%;
+  text-align: center;
+}
