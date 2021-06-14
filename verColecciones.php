@@ -10,7 +10,7 @@ foreach ($usuario as $user) {
     $saldo_usuario = $user->saldo;
     $nombre_usuario = $user->usuario;
 }
-$registros = $base->query("SELECT * FROM colecciones INNER JOIN usuarios_colecciones ON colecciones.id = usuarios_colecciones.id_coleccion WHERE usuarios_colecciones.id_usuario=$id_usuario AND colecciones.estado=1")->fetchAll(PDO::FETCH_OBJ);
+$registros = $base->query("SELECT * FROM colecciones INNER JOIN usuarios_colecciones ON colecciones.id = usuarios_colecciones.id_coleccion WHERE usuarios_colecciones.id_usuario=$id_usuario")->fetchAll(PDO::FETCH_OBJ);
 ?>
 <!DOCTYPE html>
 <html>
