@@ -25,6 +25,7 @@ $registros = $base->query("SELECT * FROM cromos INNER JOIN usuarios_cromos ON cr
 <body>
     
 <?php include("navbar.php");?>
+
     <table>
         <tr>
             <td>ID</td>
