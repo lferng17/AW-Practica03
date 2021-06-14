@@ -10,7 +10,7 @@ foreach ($usuario as $user) {
     $saldo_usuario = $user->saldo;
     $nombre_usuario = $user->usuario;
 }
-$registros = $base->query("SELECT * FROM colecciones INNER JOIN usuarios_colecciones ON colecciones.id = usuarios_colecciones.id_coleccion WHERE usuarios_colecciones.id_usuario=$id_usuario AND colecciones.estado=1")->fetchAll(PDO::FETCH_OBJ);
+$registros = $base->query("SELECT * FROM colecciones INNER JOIN usuarios_colecciones ON colecciones.id = usuarios_colecciones.id_coleccion WHERE usuarios_colecciones.id_usuario=$id_usuario")->fetchAll(PDO::FETCH_OBJ);
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,7 +42,7 @@ $registros = $base->query("SELECT * FROM colecciones INNER JOIN usuarios_colecci
         <tr>
             <td><?php echo $coleccion->id ?></td>
             <td><?php echo $coleccion->nombre ?></td>
-            <td><img src = "/AW-Practica03-main/ImagenesServidor/<?php echo $coleccion->caratula;?>" width="25%"/></td>
+            <td><img src = "/AW-Practica03-main/ImagenesServidor/<?php echo $coleccion->caratula;?>" width=140px/></td>
             <td><a href="verCromos.php?id_coleccion=<?php echo $coleccion->id?>"><input type="button" value="Ver Cromos"></a></td>
         </tr>
         <?php endforeach; ?>
