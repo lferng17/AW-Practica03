@@ -13,7 +13,7 @@ foreach ($usuario as $user) {
     $numero_registro = $replicado->rowCount();
     if($numero_registro==0){
         if ($precio < $saldo_usuario) {
-            $base->query("INSERT INTO usuarios_colecciones VALUES ($id_usuario, $id_coleccion)");
+            $base->query("INSERT INTO usuarios_colecciones VALUES ($id_usuario, $id_coleccion,0)");
             $saldo_usuario=$saldo_usuario-$precio;
             $base->query("UPDATE usuarios SET saldo=$saldo_usuario WHERE id_user=$id_usuario");
             header("Location: ../tienda.php");
