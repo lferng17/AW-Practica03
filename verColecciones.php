@@ -31,10 +31,10 @@ $registros = $base->query("SELECT * FROM colecciones INNER JOIN usuarios_colecci
     ?>
     <table>
         <tr>
-            <td>ID</td>
-            <td>Nombre</td>
-            <td>Carátula</td>
-            <td>Ver Cromos</td>
+            <td><b>ID</b></td>
+            <td><b>Nombre</b></td>
+            <td><b>Carátula</b></td>
+            <td><b>Ver Cromos</b></td>
         </tr>
 
         <?php
