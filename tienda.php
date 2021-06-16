@@ -36,12 +36,12 @@
     ?>
     <table>
         <tr>
-            <td>ID</td>
-            <td>Nombre</td>
-            <td>Precio</td>
-            <td>Carátula</td>
-            <td>Comprar Colección</td>
-            <td>Comprar Cromos</td>
+            <td><b>ID</b></td>
+            <td><b>Nombre</b></td>
+            <td><b>Precio</b></td>
+            <td><b>Carátula</b></td>
+            <td><b>Comprar Colección</b></td>
+            <td><b>Comprar Cromos</b></td>
         </tr>
 
         <?php

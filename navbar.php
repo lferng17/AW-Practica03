@@ -3,13 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
     <div id="navegador">
         <ul>
-            <li style="float:left"> <img src = "/AW-Practica03-main/ImagenesServidor/logo.png" width="100" /></li>
+            <li style="float:left"><a href="index.html"><img src = "/AW-Practica03-main/ImagenesServidor/logo.png" width="100" /></a></li>
             <li id="navBar"><a href="crearColeccion.php">CREAR COLECCIÓN</a></li>
             <li id="navBar"><a href="crearCromo.php">CREAR CROMO</a></li>
             <li id="navBar" style="float:right"><a href="funciones/cerrar_sesion.php">CERRAR SESION</a></li>

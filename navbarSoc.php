@@ -8,7 +8,7 @@
 <body>
     <div id="navegador">
         <ul>
-            <li style="float:left"> <img src = "/AW-Practica03-main/ImagenesServidor/logo.png" width="100" /></li>
+            <li style="float:left"><a href="index.html"><img src = "/AW-Practica03-main/ImagenesServidor/logo.png" width="100" /></a></li>
             <li id="navBar" style="float:right"><a href="funciones/cerrar_sesion.php">CERRAR SESION</a></li>
             <li id="navBar"><a href="tienda.php">TIENDA</a></li>
             <li id="navBar"><a href="verColecciones.php">VER LA COLECCIÓN</a></li>

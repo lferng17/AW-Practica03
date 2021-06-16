@@ -33,9 +33,9 @@ $registros = $base->query("SELECT * FROM cromos INNER JOIN usuarios_cromos ON cr
 
     <table>
         <tr>
-            <td>ID</td>
-            <td>Nombre</td>
-            <td>Carátula</td>
+            <td><b>ID</b></td>
+            <td><b>Nombre</b></td>
+            <td><b>Carátula</b></td>
         </tr>
 
         <?php

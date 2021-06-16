@@ -1,10 +1,12 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    padding-top: 7px;
+    /*padding-top: 7px;*/
+    background-color: #76b852;
+    margin: 0px;
 }
-div{
+/*div{
     padding: 3ch;
-}
+}*/
 h2{
     color: #0179aa;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -62,3 +64,24 @@ button:disabled{
     border-radius: 5px;
 }
 
+
+/* Añadido para el navBar */
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li {
+    float: left;
+}
