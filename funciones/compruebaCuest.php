@@ -16,7 +16,7 @@ foreach ($usuario as $user) {
     $golspa = strtoupper($_GET["golspa"]);
     $poraño = $_GET["poraño"];
     $gol2008 = strtoupper($_GET["gol2008"]);
-    $eurokor = strtoupper($_GET["eurokor"]);
+    $europor = strtoupper($_GET["europor"]);
     $vecesspa = $_GET["vecesspa"];
     $añocelspa = strtoupper( $_GET["añocelspa"]);
     $final = strtoupper($_GET["final2020"]);
@@ -38,7 +38,7 @@ foreach ($usuario as $user) {
     if ($poraño == 2016){
         $contador++;
     }
-    if ($eurokor == "BRASIL" || $eurokor == "SELECCIÓN BRASILEÑA"){
+    if ($europor == "GRECIA" || $europor == "SELECCIÓN GRIEGA"){
         $contador++;
     }
     if ($vecesspa == 4){

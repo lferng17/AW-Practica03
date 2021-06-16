@@ -64,8 +64,8 @@ foreach ($usuario as $user) {
                     <td><input type="text" class="cuestionarioEuro" name="gol2008"></td>
                 </tr>
                 <tr>
-                    <td><label>7. ¿Quién ganó la Eurocopa 2002 celebrada en Korea?</label></td>
-                    <td><input type="text" class="cuestionarioEuro" name="eurokor"></td>
+                    <td><label>7. ¿Quién ganó la Eurocopa 2004 celebrada en Portugal?</label></td>
+                    <td><input type="text" class="cuestionarioEuro" name="europor"></td>
                 </tr>
                 <tr>
                     <td><label>8. ¿Cúantas veces ha llegado la Selección Española a la final de la Eurocopa?</label></td>
