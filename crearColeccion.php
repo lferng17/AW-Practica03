@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_COOKIE["admin"])&&!isset($_COOKIE["usuario"])) {
+if (!isset($_COOKIE["admin"])||!isset($_COOKIE["usuario"])) {
     header("Location:login.php");
 }
 ?>

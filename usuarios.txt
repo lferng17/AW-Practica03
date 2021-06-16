@@ -1,0 +1,9 @@
+Usuario Admin:
+    -Nombre de usuario: Pepe
+    -Contraseña: 1234
+Usuarios Socios:
+    -Nombre de usuario: Luis
+    -Contraseña: 0000
+----x----
+    -Nombre de usuario: Miguel
+    -Contraseña: 666

@@ -1,0 +1,10 @@
+Equipo:
+-- Xosé Babío Sabín 54158345-S
+-- Luis Fernández Gutiérrez 44434414-R
+-- Miguel González García 44435368-N
+
+Para desplegar el proyecto será necesario colocar la carpeta raíz del proyecto en directorio personal destinado a el servidor de Apache.
+OJO: ES IMPORTANTE QUE LA CARPETA RAIZ SE LLAME "AW-Practica03-main"
+Después lanzar el servidor de Apache y el servidor de base de datos, en este caso Mysql. Acto seguido ejecutar el script sql.
+A continuación entrar en conexion_BBDD.php y conexion_BBDD_PDO.php e introducir los datos de usuario, contraseña y host de mysql.
+Abrir en el navegador la siguiente ruta: (host utilizado, en nuestro caso localhost)/AW-Practica03-main
